@@ -32,7 +32,7 @@ function searchCompanies(event){
     // Build the AJAX request:
     $.getJSON(endpoint,	{	
         q: $("#input-search").val(),
-        ps: 2,
+        ps: 10,
         pn: pageToRequest
     })
         .done(showResults)
