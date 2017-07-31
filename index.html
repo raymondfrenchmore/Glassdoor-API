@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Glassdoor API Search</title>
+		<link rel='shortcut icon' href='https://www.glassdoor.com/favicon.ico' type='image/vnd.microsoft.icon'/>
+		<link rel='icon' href='https://www.glassdoor.com/favicon.ico' type='image/x-icon'/>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="styles.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+		  <div class="jumbotron">
+			<h1>Glassdoor API Search</h1>
+			<p class="lead">Enter a text value and search the Glassdoor API by company.</p>
+			<p>The first page of results will return the company ID, company name, and any field that contains the word "rating" in it. If a CEO record exists, return the CEO name and CEO rating.</p>  
+			<form>
+			  <div class="input-group">
+				<input id="input-search" type="text" class="form-control" placeholder="Search">
+				<div class="input-group-btn">
+				  <button id="btn-submit" class="btn btn-success do-search" type="submit">
+					<i class="glyphicon glyphicon-search"></i>
+				  </button>
+				</div>
+			  </div>
+			</form>
+			</div>
+			<div id="show-results">
+				<ul class="pager">
+					<li><a id="previous" class="do-search" href="#">Previous</a></li>
+					<li><span class="page-indicator"></span></li>
+					<li><a id="next" class="do-search" href="#">Next</a></li>
+				</ul>
+				<table id="tbl-results" class="table table-striped">
+					<thead>
+					<tr>
+						<th>Company ID</th>
+						<th>Company</th>
+						<th>CEO</th>
+						<th>Ratings</th>
+					</tr>
+					</thead>
+					<tbody>				
+					</tbody>
+				</table>
+				<ul class="pager">
+					<li><a id="previous" class="do-search" href="#">Previous</a></li>
+					<li><span class="page-indicator"></span></li>
+					<li><a id="next" class="do-search" href="#">Next</a></li>
+				</ul>
+			</div>
+			<div id="error-panel" class="alert alert-warning">
+  			Sorry, there was a problem accessing the remote service.  Please check your network connection or try again later.
+			</div>
+
+			<p>Powered by <a href='https://www.glassdoor.com/index.htm'><img src='https://www.glassdoor.com/static/img/api/glassdoor_logo_80.png' alt='Glassdoor' /></a></p>
+		</div>
+		<script src="GlassdoorSearch.js"></script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
